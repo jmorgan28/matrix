@@ -45,6 +45,11 @@ Returns:
 multiply each element of m by x
 */
 void scalar_mult(double x, struct matrix *m) {
+  for(int i = 0; i < m->rows; i ++){
+    for(int f = 0; f < m->cols; f ++){
+      m -> m[i][f] = x * m -> m[i][f];
+    }
+  }
 }
 
 

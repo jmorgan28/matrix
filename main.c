@@ -16,6 +16,8 @@ int main() {
 
   ident(edges);
 
+  scalar_mult(5, edges);
+
   print_matrix(edges);
 
   free_matrix( edges );
