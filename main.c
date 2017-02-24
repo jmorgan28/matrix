@@ -13,6 +13,14 @@ int main() {
   struct matrix *edges;
   struct matrix *edges2;
 
+  color c;
+ 
+  
+  c.red = 0;
+  c.green = MAX_COLOR;
+  c.blue = 0;
+
+
   edges = new_matrix(4, 4);
 
   //add_point(edges, 2, 4, 0);
@@ -21,10 +29,16 @@ int main() {
   //add_point(edges, 283, 29, 0);
   //add_point(edges, 293, 293, 0);
   //add_point(edges, 77, 77, 0);
-  
-  add_edge(edges,2,4,0,99,6,0);
+
+
+  clear_screen(s);
+  add_edge(edges,80,4,0,100,4,0);
   add_edge(edges,105,499,0,283,99,0);
   add_edge(edges,293,293,0,77,77,0);
+  draw_lines(edges, s,c);
+
+  
+
 
   
   //edges2 = new_matrix(4, 6);
@@ -38,6 +52,10 @@ int main() {
   //grow_matrix(edges, 5);
 
   print_matrix(edges);
+
+  
+  display(s);
+  save_extension(s, "matrix.png");
 
   free_matrix( edges );
 } 
