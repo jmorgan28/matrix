@@ -11,6 +11,12 @@ Returns:
 print the matrix
 */
 void print_matrix(struct matrix *m) {
+  for(int i = 0; i < m->rows; i ++){
+    for(int f = 0; f < m->cols; f ++){
+      printf("%lf ", m ->m[i][f]);
+    }
+    printf("\n");
+  }
 }
 
 /*-------------- void ident() --------------
@@ -19,6 +25,16 @@ Returns:
 turns m in to an identity matrix
 */
 void ident(struct matrix *m) {
+  for(int i = 0; i < m->rows; i ++){
+    for(int f = 0; f < m->cols; f ++){
+      if(i == f){
+	m -> m[i][f] = 1;
+      }
+      else{
+	m -> m[i][f] = 0;
+      }
+    }
+  }	
 }
 
 
