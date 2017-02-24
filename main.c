@@ -15,14 +15,18 @@ int main() {
 
   edges = new_matrix(4, 4);
 
-  add_point(edges, 2, 4, 0);
-  add_point(edges, 99, 6, 0);
-  add_point(edges, 105, 507, 0);
-  add_point(edges, 283, 29, 0);
-  add_point(edges, 293, 293, 0);
-  add_point(edges, 77, 77, 0);
+  //add_point(edges, 2, 4, 0);
+  //add_point(edges, 99, 6, 0);
+  // add_point(edges, 105, 507, 0);
+  //add_point(edges, 283, 29, 0);
+  //add_point(edges, 293, 293, 0);
+  //add_point(edges, 77, 77, 0);
   
+  add_edge(edges,2,4,0,99,6,0);
+  add_edge(edges,105,499,0,283,99,0);
+  add_edge(edges,293,293,0,77,77,0);
 
+  
   //edges2 = new_matrix(4, 6);
 
   // ident(edges);
