@@ -11,12 +11,27 @@ int main() {
 
   screen s;
   struct matrix *edges;
+  struct matrix *edges2;
 
   edges = new_matrix(4, 4);
 
-  ident(edges);
+  add_point(edges, 2, 4, 0);
+  add_point(edges, 99, 6, 0);
+  add_point(edges, 105, 507, 0);
+  add_point(edges, 283, 29, 0);
+  add_point(edges, 293, 293, 0);
+  add_point(edges, 77, 77, 0);
+  
 
-  scalar_mult(5, edges);
+  //edges2 = new_matrix(4, 6);
+
+  // ident(edges);
+
+  //scalar_mult(5, edges2);
+
+  //matrix_mult(edges, edges2);
+
+  //grow_matrix(edges, 5);
 
   print_matrix(edges);
 
