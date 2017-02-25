@@ -63,19 +63,20 @@ Returns:
 a*b -> b
 */
 void matrix_mult(struct matrix *a, struct matrix *b) {
+  printf("work\n");
   struct matrix *temp = new_matrix(b->rows, b->cols);
-  int i, e, f, c1, c2;
-  c1 = 0;
-  c2 = 0; 
-  for(i = 0; i < a -> rows; i ++){
-    for(e = 0; e < a -> cols; e ++){
-      for(f = 0; f < b-> cols; f ++){
-	temp -> m[c1][c2] += a-> m[i][e] * b ->m[e][i];
+  printf("working\n");
+  int e,f,g;
+  for(e = 0; e < a->rows; e++){
+    for(f = 0; f < b-> cols; f ++){
+      for(g = 0; g < a -> rows;g ++){
+	temp -> m[e][f] = temp->m[e][f] + (a -> m[e][g] * b->m[g][e]);
       }
     }
   }
-  copy_matrix(temp, b);
+  copy_matrix(temp,b);
 }
+					 
 
 
 /*===============================================
@@ -105,6 +106,13 @@ struct matrix *new_matrix(int rows, int cols) {
   m->rows = rows;
   m->cols = cols;
   m->lastcol = 0;
+  int h,s;
+  for(h= 0; h < m->rows; h ++){
+    for(s = 0; s < m->cols; s ++){
+      m -> m[h][s] = 0;
+    }
+  }
+  
 
   return m;
 }

@@ -22,7 +22,7 @@ int main() {
 
 
   edges = new_matrix(4, 4);
-
+  edges2 = new_matrix(4, 4);
   //add_point(edges, 2, 4, 0);
   //add_point(edges, 99, 6, 0);
   // add_point(edges, 105, 507, 0);
@@ -34,10 +34,14 @@ int main() {
   clear_screen(s);
   add_edge(edges,80,4,0,100,4,0);
   add_edge(edges,105,499,0,283,99,0);
-  add_edge(edges,293,293,0,77,77,0);
-  draw_lines(edges, s,c);
+  add_edge(edges2,293,293,0,77,77,0);
+  add_edge(edges2,29,23,0,77,77,0);
+  add_edge(edges2,3,34,0,77,77,0);
+  //draw_lines(edges, s,c);
 
+  //printf("check\n");
   
+  //matrix_mult(edges,edges2);
 
 
   
@@ -54,8 +58,8 @@ int main() {
   print_matrix(edges);
 
   
-  display(s);
-  save_extension(s, "matrix.png");
+  //display(s);
+  //save_extension(s, "matrix.png");
 
   free_matrix( edges );
 } 
