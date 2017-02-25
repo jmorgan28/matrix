@@ -41,7 +41,7 @@ int main() {
 
   //printf("check\n");
   
-  //matrix_mult(edges,edges2);
+  matrix_mult(edges,edges2);
 
 
   
@@ -55,7 +55,7 @@ int main() {
 
   //grow_matrix(edges, 5);
 
-  print_matrix(edges);
+  print_matrix(edges2);
 
   
   //display(s);

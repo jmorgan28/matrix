@@ -148,6 +148,7 @@ void grow_matrix(struct matrix *m, int newcols) {
   int i;
   for (i=0;i<m->rows;i++) {
       m->m[i] = realloc(m->m[i],newcols*sizeof(double));
+      m -> m[i][newcols - 1] = 0;
   }
   m->cols = newcols;
 }
