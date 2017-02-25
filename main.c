@@ -40,7 +40,9 @@ int main() {
   //draw_lines(edges, s,c);
 
   //printf("check\n");
-  
+
+
+  // ident(edges);
   matrix_mult(edges,edges2);
 
 

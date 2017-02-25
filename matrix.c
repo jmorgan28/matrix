@@ -63,14 +63,14 @@ Returns:
 a*b -> b
 */
 void matrix_mult(struct matrix *a, struct matrix *b) {
-  printf("work\n");
+  //printf("work\n");
   struct matrix *temp = new_matrix(b->rows, b->cols);
-  printf("working\n");
+  //printf("working\n");
   int e,f,g;
   for(e = 0; e < a->rows; e++){
     for(f = 0; f < b-> cols; f ++){
       for(g = 0; g < a -> rows;g ++){
-	temp -> m[e][f] = temp->m[e][f] + (a -> m[e][g] * b->m[g][e]);
+	temp -> m[e][f] = temp->m[e][f] + (a -> m[e][g] * b->m[g][f]);
       }
     }
   }
