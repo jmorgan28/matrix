@@ -36,7 +36,7 @@ int main() {
   add_edge(edges2,293,293,0,77,77,0);
   add_edge(edges2,29,23,0,77,77,0);
   add_edge(edges2,3,34,0,77,77,0);
-  printf("Here is matrix one filled\n");
+  printf("Here is matrix one filled using add_edge\n");
   print_matrix(edges);
   printf("Here is matriz 2 filled\n");
   print_matrix(edges2);

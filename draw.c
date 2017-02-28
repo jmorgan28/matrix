@@ -23,6 +23,7 @@ void add_point( struct matrix * points, double x, double y, double z) {
   points -> m[0][lastcol] = x;
   points -> m[1][lastcol] = y;
   points -> m[2][lastcol] = z;
+  points -> m[3][lastcol] = 1;
   points -> lastcol = points-> lastcol  + 1;
   
 
